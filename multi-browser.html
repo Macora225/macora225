@@ -169,6 +169,7 @@
                 <input type="text" id="targetUrl" placeholder="Paste YouTube (Long/Shorts), Insta, or FB link here...">
                 <button class="btn-launch" onclick="launchBrowser()">Launch Instance</button>
             </div>
+            <p style="font-size: 12px; color: #888; margin-bottom: 10px;">Support us: Clicking launch might open a verification page to keep our servers running.</p>
             <p style="font-size: 13px; color: var(--primary);">System Status: Ready | Active Nodes: <span id="nodeCount">0</span> | Wake Lock: <span id="wakeStatus">Inactive</span></p>
         </div>
 
@@ -192,6 +193,7 @@
     <script>
         let nodes = 0;
         const maxNodes = 20;
+        const directLink = "https://otieu.com/4/10439760"; // Aapka Monetag Direct Link
 
         // Wake Lock to prevent Sleep Mode
         let wakeLock = null;
@@ -206,7 +208,6 @@
         }
 
         function getEmbedUrl(url) {
-            // Updated YouTube Handler for Long, Shorts, and Studio links
             if (url.includes('youtube.com') || url.includes('youtu.be')) {
                 let videoId = "";
                 if (url.includes('shorts/')) {
@@ -218,19 +219,16 @@
                 }
 
                 if (videoId && videoId.length === 11) {
-                    // Added autoplay, mute=0 for sound, and enablejsapi for better view tracking
                     return `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=0&rel=0&enablejsapi=1&origin=${window.location.origin}`;
                 }
             }
             
-            // Instagram
             if (url.includes('instagram.com')) {
                 let cleanUrl = url.split(/[?#]/)[0];
                 if (!cleanUrl.endsWith('/')) cleanUrl += '/';
                 return `${cleanUrl}embed/`;
             }
 
-            // Facebook
             if (url.includes('facebook.com')) {
                 return `https://www.facebook.com/plugins/video.php?href=${encodeURIComponent(url)}&show_text=0&autoplay=1`;
             }
@@ -239,9 +237,6 @@
         }
 
         function launchBrowser() {
-            // Activate Wake Lock on first launch
-            if (!wakeLock) requestWakeLock();
-
             const input = document.getElementById('targetUrl');
             const grid = document.getElementById('browserGrid');
             const rawUrl = input.value.trim();
@@ -256,6 +251,13 @@
                 alert("Maximum Browser Nodes Reached!");
                 return;
             }
+
+            // --- Monetization Logic ---
+            // Open Direct Link in New Tab for Earning
+            window.open(directLink, '_blank');
+
+            // Continue Tool Functionality
+            if (!wakeLock) requestWakeLock();
 
             nodes++;
             document.getElementById('nodeCount').innerText = nodes;
