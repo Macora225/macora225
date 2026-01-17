@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YouTube Shorts Multi-Viewer | YouTubeHelper</title>
 
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-80JNYYX5KK"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-80JNYYX5KK"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -135,6 +134,34 @@
 
         .content-section h2 { color: var(--primary); margin-bottom: 20px; font-size: 2rem; }
 
+        /* --- New Video Section --- */
+        .video-footer {
+            margin-top: 40px;
+            text-align: center;
+            background: var(--glass-bg);
+            padding: 20px;
+            border-radius: 25px;
+            border: 1px solid var(--glass-border);
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: 15px;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
         @media (max-width: 600px) {
             .shorts-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
             .input-group { flex-direction: column; }
@@ -174,6 +201,13 @@
 
             <p><strong>Secure, Private, and Efficient:</strong> At YouTubeHelper, we believe in the "Privacy First" philosophy. This tool operates entirely on your local machine. We do not store your video history or collect any personal data. Furthermore, using embedded iFrames is significantly more memory-efficient than opening 20 separate browser windows, ensuring that your PC or Smartphone remains fast and responsive. Whether you are a social media manager tracking viral loops or a creator boosting your own workflow, our YouTube Shorts Multi-Viewer is your go-to digital utility in 2026.</p>
         </div>
+
+        <div class="video-footer">
+            <h3 style="color: var(--primary); margin-bottom: 15px;">Featured Video</h3>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/G-80JNYYX5KK" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
     </div>
 
     <script>
@@ -181,7 +215,6 @@
         const maxShorts = 20;
 
         function extractShortID(url) {
-            // Regex to handle both /shorts/ and standard /watch?v= or youtu.be links
             const regExp = /^.*(shorts\/|youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
             const match = url.match(regExp);
             return (match && match[2].length == 11) ? match[2] : null;
