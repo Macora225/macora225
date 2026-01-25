@@ -33,6 +33,7 @@
             overflow-x: hidden;
         }
 
+        /* --- Header --- */
         .glass-header {
             background: rgba(15, 23, 42, 0.9);
             backdrop-filter: blur(15px);
@@ -44,16 +45,9 @@
             position: sticky; top: 0; z-index: 1000;
         }
 
-        .container { max-width: 1400px; margin: 0 auto; padding: 20px; }
+        .container { max-width: 1400px; margin: 0 auto; padding: 40px 20px; }
 
-        .ad-slot {
-            margin: 20px auto;
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            min-height: 60px;
-        }
-
+        /* --- Input Area --- */
         .input-card {
             background: var(--glass-bg);
             backdrop-filter: blur(10px);
@@ -61,7 +55,7 @@
             padding: 30px;
             border-radius: 25px;
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
 
@@ -97,6 +91,7 @@
 
         .btn-add:hover { background: #ff5e5e; transform: scale(1.05); }
 
+        /* --- Shorts Grid (Portrait Mode) --- */
         .shorts-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -124,11 +119,11 @@
             color: white; border: none;
             border-radius: 50%; width: 30px; height: 30px;
             cursor: pointer; font-weight: bold;
-            z-index: 10;
         }
 
+        /* --- SEO Description --- */
         .content-section {
-            margin-top: 40px;
+            margin-top: 80px;
             background: rgba(255,255,255,0.03);
             border: 1px solid var(--glass-border);
             padding: 40px;
@@ -138,6 +133,8 @@
         }
 
         .content-section h2 { color: var(--primary); margin-bottom: 20px; font-size: 2rem; }
+
+        .ad-container { text-align: center; margin: 20px 0; }
 
         @media (max-width: 600px) {
             .shorts-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
@@ -155,7 +152,7 @@
 
     <div class="container">
         
-        <div class="ad-slot">
+        <div class="ad-container">
             <script>
                 atOptions = {
                     'key' : '6c1432158b868c97ca54d0c3eef65bc7',
@@ -179,7 +176,7 @@
             <p id="counter" style="margin-top: 15px; font-size: 14px;">Active Instances: 0 / 20</p>
         </div>
 
-        <div class="ad-slot">
+        <div class="ad-container">
             <script async="async" data-cfasync="false" src="https://pl28565685.effectivegatecpm.com/ad1288ee73006596cffbc44a44b97c80/invoke.js"></script>
             <div id="container-ad1288ee73006596cffbc44a44b97c80"></div>
         </div>
@@ -189,11 +186,11 @@
 
         <div class="content-section">
             <h2>Revolutionize Your Short-Form Content Strategy with YouTubeHelper</h2>
-            <p>Welcome to the most advanced <strong>YouTube Shorts Multi-Viewer</strong> available online. In the competitive world of short-form video, engagement and visibility are key...</p>
+            <p>Welcome to the most advanced <strong>YouTube Shorts Multi-Viewer</strong> available online. In the competitive world of short-form video, engagement and visibility are key. Our tool is specifically engineered to help creators, marketers, and enthusiasts view multiple YouTube Shorts simultaneously. This is not just a viewer; it's a productivity powerhouse designed for those who need to monitor content trends, analyze competitor shorts, or simply enjoy a multi-stream experience without the lag of multiple browser tabs.</p>
             
-            <p><strong>Designed for Portrait Performance:</strong> Unlike standard video players, our Shorts viewer is optimized for the 9:16 aspect ratio...</p>
+            <p><strong>Designed for Portrait Performance:</strong> Unlike standard video players, our Shorts viewer is optimized for the 9:16 aspect ratio. This ensures that every video fits perfectly within its "Glass Container," providing a crisp and clear viewing experience. When you add a link, our system automatically strips the unnecessary metadata and focuses purely on the video player. By default, videos are muted to comply with browser autoplay policies, allowing you to load up to 20 instances without causing an immediate audio overlap.</p>
 
-            <div class="ad-slot">
+            <div class="ad-container">
                 <script>
                     atOptions = {
                         'key' : '6c1432158b868c97ca54d0c3eef65bc7',
@@ -206,8 +203,9 @@
                 <script src="https://www.highperformanceformat.com/6c1432158b868c97ca54d0c3eef65bc7/invoke.js"></script>
             </div>
 
-            <p><strong>Seamless User Experience:</strong> To use this tool, simply copy the URL of any YouTube Short...</p>
-            <p><strong>Secure, Private, and Efficient:</strong> At YouTubeHelper, we believe in the "Privacy First" philosophy...</p>
+            <p><strong>Seamless User Experience:</strong> To use this tool, simply copy the URL of any YouTube Short. Our intelligent URL parser handles various formats, whether it's a direct 'shorts/' link or a standard mobile sharing link. Once you click "Add Short," a new slot is generated in our responsive grid. On a desktop, you'll see a beautiful side-by-side arrangement, while on mobile, the grid adjusts to show two videos per row, making it the perfect tool for testing how your content looks on different screen sizes.</p>
+
+            <p><strong>Secure, Private, and Efficient:</strong> At YouTubeHelper, we believe in the "Privacy First" philosophy. This tool operates entirely on your local machine. We do not store your video history or collect any personal data. Furthermore, using embedded iFrames is significantly more memory-efficient than opening 20 separate browser windows, ensuring that your PC or Smartphone remains fast and responsive. Whether you are a social media manager tracking viral loops or a creator boosting your own workflow, our YouTube Shorts Multi-Viewer is your go-to digital utility in 2026.</p>
         </div>
     </div>
 
