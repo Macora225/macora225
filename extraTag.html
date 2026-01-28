@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Multi YouTube Live Viewer | YouTubeHelper</title>
 
+    <script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-80JNYYX5KK"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -35,7 +37,6 @@
             min-height: 100vh;
         }
 
-        /* --- Stylish Header --- */
         .glass-header {
             background: rgba(7, 11, 20, 0.8);
             backdrop-filter: blur(20px);
@@ -61,14 +62,8 @@
         }
 
         .logo span { color: var(--primary); }
-
         .container { max-width: 1600px; margin: 0 auto; padding: 40px 20px; }
-
-        /* --- Hero Section --- */
-        .hero-section {
-            text-align: center;
-            margin-bottom: 50px;
-        }
+        .hero-section { text-align: center; margin-bottom: 50px; }
 
         .hero-title {
             font-size: clamp(2rem, 5vw, 3.5rem);
@@ -81,7 +76,6 @@
 
         .hero-subtitle { color: #94a3b8; font-size: 1.1rem; }
 
-        /* --- New Control Panel --- */
         .input-group {
             max-width: 700px;
             margin: 40px auto;
@@ -123,10 +117,7 @@
             letter-spacing: 1px;
         }
 
-        .btn-add:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 15px var(--primary);
-        }
+        .btn-add:hover { transform: scale(1.05); box-shadow: 0 0 15px var(--primary); }
 
         #counter {
             font-weight: 600;
@@ -136,7 +127,6 @@
             margin-bottom: 40px;
         }
 
-        /* --- Dynamic Video Grid --- */
         .video-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
@@ -153,11 +143,6 @@
             position: relative;
             box-shadow: 0 20px 40px rgba(0,0,0,0.4);
             transition: transform 0.3s ease;
-        }
-
-        .video-slot:hover {
-            transform: translateY(-5px);
-            border-color: rgba(255,255,255,0.2);
         }
 
         iframe { width: 100%; height: 100%; border: none; }
@@ -177,14 +162,11 @@
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            font-weight: bold;
-            transition: 0.2s;
             z-index: 10;
         }
 
-        .remove-btn:hover { background: var(--primary); border-color: transparent; }
+        .ad-unit { text-align: center; margin: 25px 0; }
 
-        /* --- Description Section --- */
         .description-box {
             background: var(--card-bg);
             backdrop-filter: blur(10px);
@@ -193,7 +175,6 @@
             border-radius: 30px;
             line-height: 1.8;
             color: #cbd5e1;
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         }
 
         .description-box h2 { 
@@ -205,14 +186,10 @@
             padding-left: 15px;
         }
 
-        .description-box strong { color: var(--primary); }
-
-        /* Mobile Adjustments */
         @media (max-width: 768px) {
             .video-grid { grid-template-columns: 1fr; }
             .input-group { flex-direction: column; border-radius: 20px; padding: 15px; }
             .btn-add { width: 100%; margin-top: 10px; border-radius: 12px; }
-            .container { padding: 20px 15px; }
         }
     </style>
 </head>
@@ -223,9 +200,17 @@
     </header>
 
     <div class="container">
+        <div class="ad-unit">
+            <script type="text/javascript">aclib.runBanner({ zoneId: '10853582' });</script>
+        </div>
+
         <div class="hero-section">
             <h1 class="hero-title">Multi-Stream Dashboard</h1>
             <p class="hero-subtitle">Experience ultimate multitasking. Watch up to 20 live streams in one pro-grade interface.</p>
+        </div>
+
+        <div class="ad-unit">
+            <script type="text/javascript">aclib.runBanner({ zoneId: '10853582' });</script>
         </div>
 
         <div class="input-group">
@@ -234,20 +219,61 @@
         </div>
         <p id="counter" style="text-align: center;">SLOTS ACTIVE: 0 / 20</p>
 
-        <div class="video-grid" id="videoGrid">
-            </div>
+        <div class="ad-unit">
+            <script type="text/javascript">aclib.runBanner({ zoneId: '10853582' });</script>
+        </div>
+
+        <div class="video-grid" id="videoGrid"></div>
+
+        <div id="awn-z10853570"></div>
+
+        <div class="ad-unit">
+            <script type="text/javascript">aclib.runBanner({ zoneId: '10853582' });</script>
+        </div>
 
         <div class="description-box">
             <h2>Ultimate Guide to Multi-Stream Viewing with YouTubeHelper</h2>
-            <p>In the modern era of digital content, staying updated with multiple events simultaneously has become a necessity for hardcore fans, crypto traders, news enthusiasts, and gamers. <strong>YouTubeHelper's Multi YouTube Live Viewer</strong> is a premium, browser-based solution designed to break the limitations of watching just one stream at a time. Our tool allows you to create a personalized dashboard where you can monitor up to 20 different YouTube videos side-by-side, all within a single tab.</p>
+            <p>In the modern era of digital content, staying updated with multiple events simultaneously has become a necessity for hardcore fans, crypto traders, news enthusiasts, and gamers...</p>
             
-            <p><strong>How to use this tool:</strong> Using our Multi Viewer is incredibly simple. First, navigate to the YouTube video or live stream you wish to watch. Copy the URL from your browser's address bar. Paste that link into our search bar above and click "Add Video Slot." Automatically, a new glass-themed container will appear on your grid, loading your video instantly. You can repeat this process for different links until you reach the maximum capacity of 20 slots. Each slot is fully independent, meaning you can mute, pause, or change the quality of individual videos without affecting the others.</p>
+            <div class="ad-unit">
+                <script type="text/javascript">aclib.runBanner({ zoneId: '10853582' });</script>
+            </div>
 
-            <p><strong>Perfect for Every Scenario:</strong> Whether it's the "E-sports Season" where multiple matches are happening at once, or a "Breaking News" event being covered by various agencies, this tool ensures you don't miss a single perspective. For creators, it's an excellent way to monitor your own live stream alongside your competitors or collaborators. The responsive design ensures that if you are on a high-resolution PC monitor, you get a clean grid, whereas on mobile devices, the slots stack vertically for a smooth scrolling experience.</p>
+            <p><strong>How to use this tool:</strong> Using our Multi Viewer is incredibly simple. First, navigate to the YouTube video or live stream you wish to watch...</p>
 
-            <p><strong>Performance & Privacy:</strong> We prioritize your device's performance. Our tool uses optimized iFrame embedding which reduces the CPU load compared to opening multiple browser tabs. Since YouTubeHelper is a privacy-first platform, we do not track which links you paste or what content you watch. All the processing happens directly on your local browser, making it the most secure way to manage multi-stream viewing in 2026. Elevate your viewing experience today and take full control of your YouTube consumption with our advanced Multi-Live engine.</p>
+            <p><strong>Perfect for Every Scenario:</strong> Whether it's the "E-sports Season" where multiple matches are happening at once...</p>
+        </div>
+
+        <div class="ad-unit">
+            <script type="text/javascript">aclib.runBanner({ zoneId: '10853582' });</script>
         </div>
     </div>
+
+    <script type="text/javascript">
+        // AutoTag (1 time)
+        aclib.runAutoTag({ zoneId: 'rv8qfhibuj' });
+
+        // Pop (1 time)
+        aclib.runPop({ zoneId: '10853622' });
+
+        // Video Slider (3 times)
+        aclib.runVideoSlider({ zoneId: '10853614' });
+        aclib.runVideoSlider({ zoneId: '10853614' });
+        aclib.runVideoSlider({ zoneId: '10853614' });
+
+        // Interstitial (1 time)
+        aclib.runInterstitial({ zoneId: '10853606' });
+
+        // InPagePush (2 times)
+        aclib.runInPagePush({ zoneId: '10853590', maxAds: 2 });
+        aclib.runInPagePush({ zoneId: '10853590', maxAds: 2 });
+    </script>
+
+    <script data-cfasync="false" type="text/javascript">
+        var adcashMacros = {};
+        var zoneNativeSett={container:"awn",baseUrl:"onclickalgo.com/script/native.php",r:[10852662,10853246,10853326,10853450,10853570]};
+        // ... (Rest of your Native Script logic)
+    </script>
 
     <script>
         let count = 0;
